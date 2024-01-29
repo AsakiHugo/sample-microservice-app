@@ -86,6 +86,42 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col">
+            <a class="btn btn-primary my-3"
+               th:href="@{/ui/employees}"
+            >All Employees</a>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Employees</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>FirstName</th>
+                            <th>LastName</th>
+                            <th>PhoneNumber</th>
+                            <th>Address</th>
+                            <th>CubicleNo</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="emp : ${employees}">
+                            <td th:text="${emp.id}"></td>
+                            <td th:text="${emp.firstName}"></td>
+                            <td th:text="${emp.lastName}"></td>
+                            <td th:text="${emp.phoneNumber}"></td>
+                            <td th:text="${emp.address}"></td>
+                            <td th:text="${emp.cubicleNo}"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>

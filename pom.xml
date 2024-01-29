@@ -20,6 +20,7 @@
         <module>web-ui</module>
         <module>eureka-server</module>
         <module>gate-way</module>
+        <module>employee-service</module>
     </modules>
 
     <dependencyManagement>
